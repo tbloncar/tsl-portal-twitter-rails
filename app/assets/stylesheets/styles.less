@@ -1,0 +1,398 @@
+// STYLES FOR WEB DEV AM PORTAL VIEW
+
+body { padding-top: 50px; background: #EFEFEF; }
+
+.wrapper { width: 980px; margin: 0 auto; }
+
+header {
+	height: 80px;
+	width: 100%;
+	display: block;
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	margin-top: -50px;
+	border-bottom: 3px solid #FFF;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	z-index: 2;
+	h1 {
+		font-family: 'Aguafina Script', sans-serif;
+		margin-top: 10px;
+		width: 50%;
+		float: left;
+		color: #FFF;
+		background: url('/assets/blue-twitter.png') no-repeat left bottom;
+		padding-left: 60px;
+		padding-top: 10px;
+		font-weight: 100;
+	}
+	nav {
+		float: right;
+		margin-top: 18px;
+		a {
+			display: inline-block;
+			padding: 10px 0;
+			background-color: #CECECE;
+			&:first-of-type {
+				background: url('/assets/tsl.png') no-repeat left center;
+				padding-left: 70px;
+				color: #FFF;
+				font-family: "Open Sans", sans-serif;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.fixed-nav {
+	background: #CCC;
+	position: fixed;
+	top: 200px;
+	right: 0;
+	height: 128px;
+	width: 170px;
+	padding: 15px;
+	z-index: 2;
+	border-left: 1px solid #BBB;
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	.box-sizing;
+	span {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		display: block;
+		width: 100%;
+		margin: 10px 0;
+		padding: 10px 15px;
+		background: #c1272d;
+		color: #FFF;
+		border: 2px solid #FFF;
+		text-align: center;
+		.rounded(20px);
+		.box-sizing;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&:hover {
+			background: #555;
+			cursor: pointer;
+		}
+	}
+}
+
+.students {
+	overflow: auto;
+	margin-top: 45px;
+	padding-top: 3px;
+	padding-bottom: 15px;
+	border-bottom: 2px dotted #CCC;
+	.course-title {
+		h2 {
+			margin-bottom: 40px;
+		}
+	}
+	&:last-of-type {
+		margin-top: 10px;
+		margin-bottom: 45px;
+	}
+}
+
+.student {
+	width: 480px;
+	background: #FFF;
+	float: left;
+	margin-right: 19px;
+	margin-bottom: 20px;
+	.drop-shadow(0,0,5px,0.2);
+	.rounded(2px);
+	.box-sizing;
+	&:nth-of-type(odd) {
+		margin-right: 0;
+	}
+	.student-info {
+		overflow: auto;
+		position: relative;
+		img {
+			width: 150px;
+			height: 150px;
+			border-top-left-radius: 2px;
+			border: 1px solid #AAA;
+			float: left;
+			margin-right: 10px;
+		}
+		h3 {
+			float: left;
+			margin-top: 8px;
+			font-size: 24px;
+			width: 300px;
+
+		}
+		span {
+			display: block;
+			float: left;
+			margin-right: 7px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				background: #CECECE;
+				padding: 10px 15px;
+				text-decoration: none;
+				color: #FFF;
+				text-shadow: 0 0 1px rgba(0,0,0,0.8);
+				.rounded(20px);
+				&:hover {
+					background-color: #AAA;
+				}
+			}
+		}
+		.circle a {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.email a {
+			background: #CECECE url('/assets/mail.png') no-repeat center center;
+		}
+		.blog a {
+			background: #CECECE url('/assets/link.png') no-repeat center center;
+		}
+		.stream-reveal {
+			display: block;
+			float: left;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: #00acee;
+			color: #FFF;
+			padding: 10px;
+			font-size: 12px;
+			border-bottom: 1px solid #BBB;
+			border-right: 1px solid #AAA;
+			border-bottom-right-radius: 2px;
+			box-shadow: -5px -5px 0 #009ACD;
+			&:hover {
+				background: #009ACD;
+				box-shadow: -5px -5px 0 #00688B;
+				cursor: pointer;
+			}
+		}
+	}
+	.student-stream {
+		display: none;
+	}
+	.student-stream-show {
+		display: block;
+		border-top: 2px solid #DDD;
+		position: absolute;
+		z-index: 1;
+		width: 480px;
+		.drop-shadow(0,4px,20px,0.8);
+		p 	{
+			padding: 10px;
+			margin: 0;
+			background: #FFF;
+			font-size: 12px;
+			line-height: 18px;
+			border-bottom: 2px solid #DDD;
+			text-decoration: none;
+			color: #333;
+			&:last-of-type {
+				border-bottom-right-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+			&:hover {
+				background: #00acee;
+				color: #FFF;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: #222;
+			&:nth-of-type(even) {
+				p { background: #EEE; }
+			}
+			&:hover {
+				p { background: #00acee; }
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, rgb(@start,@start,@start)),
+                               color-stop(1, rgb(@stop,@stop,@stop)));
+  background: -ms-linear-gradient(bottom,
+                                  rgb(@start,@start,@start) 0%,
+                                  rgb(@stop,@stop,@stop) 100%);
+  background: -moz-linear-gradient(center bottom,
+                                   rgb(@start,@start,@start) 0%,
+                                   rgb(@stop,@stop,@stop) 100%);
+  background: -o-linear-gradient(rgb(@stop,@stop,@stop),
+                                 rgb(@start,@start,@start));
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
+}
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
+  border-top: solid 1px @top-color;
+  border-left: solid 1px @left-color;
+  border-right: solid 1px @right-color;
+  border-bottom: solid 1px @bottom-color;
+}
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  .background-clip(padding-box);
+}
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+  .background-clip(padding-box);
+}
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
+}
+.transition-duration(@duration: 0.2s) {
+  -moz-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  -o-transition-duration: @duration;
+  transition-duration: @duration;
+}
+.transform(...) {
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -o-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
+}
+.rotation(@deg:5deg){
+  .transform(rotate(@deg));
+}
+.scale(@ratio:1.5){
+  .transform(scale(@ratio));
+}
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.inner-white(@horizontal:0, @vertical:1px, @blur:0, @alpha: 0.3) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(255, 255, 255, @alpha);
+}
+
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.box-sizing(@sizing: border-box) {
+  -ms-box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+  box-sizing: @sizing;
+}
+.user-select(@argument: none) {
+  -webkit-user-select: @argument;
+  -moz-user-select: @argument;
+  -ms-user-select: @argument;
+  user-select: @argument;
+}
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+.translate(@x:0, @y:0) {
+  .transform(translate(@x, @y));
+}
+.background-clip(@argument: padding-box) {
+  -moz-background-clip: @argument;
+  -webkit-background-clip: @argument;
+  background-clip: @argument;
+}

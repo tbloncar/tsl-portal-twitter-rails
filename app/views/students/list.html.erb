@@ -1,0 +1,50 @@
+<header>
+	<div class='wrapper'>
+		<h1>TSL Portal Web Dev Twitter Feed</h1>
+		<nav>
+			<a href='http://portal.starterleague.com/'>Go to Portal</a>
+		</nav>
+	</div>
+</header>
+<div class='fixed-nav'>
+	<span class='am'>AM Students</span>
+	<span class='pm'>PM Students</span>
+</div>
+<div class='wrapper'>
+	<% @students.each do |course, studs| %>
+		<div class='students' id='<%= course[-2,2].downcase %>'>
+			<div class='course-title'>
+				<h2><%= course %></h2>
+			</div>
+			<% studs.each do |stud| %>
+				<div class='student'>
+					<div class='student-info'>
+						<img src='<%= stud.photo_url %>' alt='<%= stud.name %>'>
+           				<h3><%= stud.name %></h3>
+						<% if stud.twitter != '' %>
+					  		<% if stud.twitter[0] != '@' %>
+					  			<span><a href='http://twitter.com/<%= stud.twitter %>'><%= stud.twitter %></a></span>
+					  		<% else %>
+					  			<span><a href='http://twitter.com/<%= stud.twitter %>'><%= stud.twitter %></a></span>"
+					  		<% end %>
+						<% end %>
+						<span class='email circle'><a href='mailto:<%= stud.email %>'></a></span>
+						<% if stud.blog != '' %>
+							 <span class='blog circle'><a href='<%= stud.blog %>' target='_blank'></a></span>
+						<% end %>
+					  	<% if stud.twitter != '' %>
+					  		<div class='stream-reveal'>View Recent Tweets</div>
+					 	<% end %>
+						</div>
+						<% if stud.twitter != '' %>
+					  	<div class='student-stream'>
+					  		<% stud.stream.each do |tweet| %>
+  								<a href='<%= tweet[1] %>' target='_blank'><p><%= tweet[0] %></p></a>
+  							<% end %>
+					  	</div>
+						<% end %>
+					</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
