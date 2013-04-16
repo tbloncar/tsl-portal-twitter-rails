@@ -3,4 +3,8 @@ class Student
  
 
 
+  def print_stream
+  	
+
+  end
 end
