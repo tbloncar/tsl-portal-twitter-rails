@@ -23,7 +23,7 @@
            				<h3><%= stud.name %></h3>
 						<% if stud.twitter != '' %>
 					  		<% if stud.twitter[0] != '@' %>
-					  			<span><a href='http://twitter.com/<%= stud.twitter %>'><%= stud.twitter %></a></span>
+					  			<span><a href='http://twitter.com/<%= stud.twitter %>'>@<%= stud.twitter %></a></span>
 					  		<% else %>
 					  			<span><a href='http://twitter.com/<%= stud.twitter %>'><%= stud.twitter %></a></span>
 					  		<% end %>
